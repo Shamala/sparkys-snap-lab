@@ -15,7 +15,7 @@ import { SafetyNotice } from '@/shamallya/components/safety-notice'
 import { ProgressDots } from '@/shamallya/components/progress-dots'
 import { AnnounceProvider, useAnnounce } from '@/shamallya/components/announce'
 import Board from './Board.jsx'
-import { CONTENT_URL, SPARKY_URL } from './services.js'
+import { CONTENT_URL, SPARKY_URL, PARTS_URL } from './services.js'
 import { say, stop, clipName, partSpeech, useMouth } from './voice.js'
 
 const ls = {
@@ -131,7 +131,7 @@ function Home({ projects }) {
 // Pictures of the real kit pieces (public/parts). Pieces without one (music, alarm and space chips) keep their emoji.
 const HAS_IMG = new Set('W2 W3 W4 W5 B1 S1 S2 L1 D1 D2 M1 SP WC R1 R4 RV RP C4 Q2'.split(' '))
 
-const card = (p) => <GlossaryCard key={p.id} emoji={p.emoji} imgSrc={HAS_IMG.has(p.id) ? `/parts/${p.id}.png` : undefined} name={p.name} id={p.id} what={p.what} why={p.why} how={p.how} />
+const card = (p) => <GlossaryCard key={p.id} emoji={p.emoji} imgSrc={HAS_IMG.has(p.id) ? `${PARTS_URL}/${p.id}.png` : undefined} name={p.name} id={p.id} what={p.what} why={p.why} how={p.how} />
 
 function Parts({ parts }) {
   return (
@@ -184,7 +184,7 @@ function Needs({ project, parts }) {
             <li key={k}>
               <button type="button" className="need" aria-pressed={picked === k} onClick={() => setPicked(picked === k ? null : k)}>
                 {HAS_IMG.has(k)
-                  ? <img className="piece-img" src={`/parts/${k}.png`} alt="" loading="lazy" />
+                  ? <img className="piece-img" src={`${PARTS_URL}/${k}.png`} alt="" loading="lazy" />
                   : <span className="big-emoji" aria-hidden="true">{parts[k].emoji}</span>}
                 <span>{parts[k].name}</span>
                 <b>× {count[k]}</b>

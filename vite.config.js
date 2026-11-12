@@ -16,6 +16,8 @@ const serveServices = () => ({
 })
 
 export default defineConfig({
+  // GitHub Pages serves the site at /<repo>/; the deploy workflow sets BASE. Locally it stays '/'.
+  base: process.env.BASE || '/',
   plugins: [
     react(),
     serveServices(),
