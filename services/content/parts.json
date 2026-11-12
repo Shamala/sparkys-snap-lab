@@ -1,0 +1,295 @@
+{
+ "W2": {
+  "id": "2",
+  "name": "2-Snap Wire",
+  "emoji": "➖",
+  "len": 2,
+  "color": "#3a86ff",
+  "what": "A wire is a road for electricity.",
+  "why": "It joins pieces together so electricity can travel between them.",
+  "how": "Snap each end onto a post. Wires can go on top of other pieces too."
+ },
+ "W3": {
+  "id": "3",
+  "name": "3-Snap Wire",
+  "emoji": "➖",
+  "len": 3,
+  "color": "#3a86ff",
+  "what": "A longer road for electricity.",
+  "why": "Use it when two pieces are far apart.",
+  "how": "Snap each end onto a post."
+ },
+ "W4": {
+  "id": "4",
+  "name": "4-Snap Wire",
+  "emoji": "➖",
+  "len": 4,
+  "color": "#3a86ff",
+  "what": "An even longer road for electricity.",
+  "why": "It reaches across the board.",
+  "how": "Snap each end onto a post."
+ },
+ "W5": {
+  "id": "5",
+  "name": "5-Snap Wire",
+  "emoji": "➖",
+  "len": 5,
+  "color": "#3a86ff",
+  "what": "A long road for electricity.",
+  "why": "It reaches all the way across.",
+  "how": "Snap each end onto a post."
+ },
+ "B1": {
+  "id": "B1",
+  "name": "Battery Holder",
+  "emoji": "🔋",
+  "len": 3,
+  "color": "#2b2d42",
+  "plus": true,
+  "what": "The battery is the pump that pushes electricity around the loop.",
+  "why": "Nothing works without a push! The battery gives the push.",
+  "how": "Put 2 AA batteries inside. The red + side is where the push comes OUT. Never join + and − with only wires. That makes it very hot!"
+ },
+ "S1": {
+  "id": "S1",
+  "name": "Slide Switch",
+  "emoji": "🔀",
+  "len": 2,
+  "color": "#8ecae6",
+  "what": "A switch is a gate on the road.",
+  "why": "Gate closed (OFF) stops the electricity. Gate open (ON) lets it go.",
+  "how": "Slide it to ON to turn your project on. Slide to OFF when you are done."
+ },
+ "S2": {
+  "id": "S2",
+  "name": "Press Switch",
+  "emoji": "🔘",
+  "len": 2,
+  "color": "#8ecae6",
+  "what": "A button that only works while you hold it down.",
+  "why": "Great for doorbells and games. Let go and it stops!",
+  "how": "Press it with your finger. Let go to turn it off."
+ },
+ "L1": {
+  "id": "L1",
+  "name": "Lamp",
+  "emoji": "💡",
+  "len": 2,
+  "color": "#ffd166",
+  "on": "glow",
+  "onColor": "#ffea00",
+  "what": "A tiny light bulb.",
+  "why": "When electricity goes through it, it gets bright. It can glow dim or bright.",
+  "how": "Snap it anywhere in the loop. It does not care which way it points."
+ },
+ "D1": {
+  "id": "D1",
+  "name": "Red LED",
+  "emoji": "🔴",
+  "len": 2,
+  "color": "#ff6b6b",
+  "plus": true,
+  "on": "glow",
+  "onColor": "#ff0000",
+  "what": "LED means Light Emitting Diode. It is a tiny red light.",
+  "why": "An LED uses very little electricity and it only works ONE way.",
+  "how": "Point the + side toward the battery + side. Always use it with a resistor so it does not break."
+ },
+ "D2": {
+  "id": "D2",
+  "name": "Green LED",
+  "emoji": "🟢",
+  "len": 2,
+  "color": "#06d6a0",
+  "plus": true,
+  "on": "glow",
+  "onColor": "#00ff66",
+  "what": "A tiny green light. Same as the red LED, just green!",
+  "why": "Two colors let you make traffic lights and games.",
+  "how": "Point the + side toward the battery + side. Use with a resistor."
+ },
+ "M1": {
+  "id": "M1",
+  "name": "Motor + Fan",
+  "emoji": "🌀",
+  "len": 2,
+  "color": "#adb5bd",
+  "on": "spin",
+  "what": "A motor spins when electricity goes through it.",
+  "why": "Motors make things move: fans, cars, toys.",
+  "how": "Snap it in, then put the fan on top. Keep fingers and hair away from the spinning fan!"
+ },
+ "SP": {
+  "id": "SP",
+  "name": "Speaker",
+  "emoji": "🔊",
+  "len": 2,
+  "color": "#cdb4db",
+  "on": "music",
+  "what": "A speaker turns electricity into sound.",
+  "why": "It is how your project can sing, beep or buzz.",
+  "how": "Snap it in. It does not care which way it points."
+ },
+ "WC": {
+  "id": "WC",
+  "name": "Whistle Chip",
+  "emoji": "📣",
+  "len": 2,
+  "color": "#cdb4db",
+  "on": "music",
+  "what": "A flat little chip that can beep. It is a baby speaker.",
+  "why": "It is quieter and smaller than the big speaker.",
+  "how": "Snap it in like a wire."
+ },
+ "R1": {
+  "id": "R1",
+  "name": "Resistor 100",
+  "emoji": "🧱",
+  "len": 2,
+  "color": "#f4a261",
+  "what": "A resistor slows electricity down, like a speed bump.",
+  "why": "Some pieces (like LEDs) break if too much electricity rushes in. The resistor protects them.",
+  "how": "Snap it in the loop next to the LED. Any direction is fine."
+ },
+ "R4": {
+  "id": "R4",
+  "name": "Resistor 10K",
+  "emoji": "🧱",
+  "len": 2,
+  "color": "#e76f51",
+  "what": "A big speed bump. It lets only a tiny trickle through.",
+  "why": "A transistor needs only a trickle on its B leg to turn on.",
+  "how": "Snap it in. Any direction is fine."
+ },
+ "RV": {
+  "id": "RV",
+  "name": "Knob (Variable Resistor)",
+  "emoji": "🎚️",
+  "len": 3,
+  "color": "#f4a261",
+  "what": "A speed bump you can change by turning the knob.",
+  "why": "Turn the knob to make lights dimmer or fans slower.",
+  "how": "It has 3 snaps. Use one END snap and the MIDDLE snap, then turn the knob."
+ },
+ "RP": {
+  "id": "RP",
+  "name": "Light Sensor (Photoresistor)",
+  "emoji": "🌞",
+  "len": 2,
+  "color": "#ffb703",
+  "what": "A speed bump that changes with light. Bright light = small bump. Dark = big bump.",
+  "why": "It lets your project notice if it is light or dark.",
+  "how": "Snap it in. Cover it with your hand to make it dark."
+ },
+ "C4": {
+  "id": "C4",
+  "name": "Capacitor 100uF",
+  "emoji": "🪣",
+  "len": 2,
+  "color": "#90be6d",
+  "plus": true,
+  "what": "A tiny bucket that stores electricity.",
+  "why": "It can keep a light on for a moment after you let go of the switch.",
+  "how": "Point the + side toward the battery + side."
+ },
+ "Q2": {
+  "id": "Q2",
+  "name": "Transistor (NPN)",
+  "emoji": "🪄",
+  "len": 3,
+  "tall": 2,
+  "color": "#b5e48c",
+  "pins": {
+   "C": [
+    0,
+    0
+   ],
+   "E": [
+    2,
+    0
+   ],
+   "B": [
+    1,
+    1
+   ]
+  },
+  "what": "A transistor is a magic helper switch with 3 legs: C, B and E.",
+  "why": "A tiny trickle into leg B lets a BIG flow go from C to E. It turns a whisper into a shout.",
+  "how": "Match the letters C, B and E printed on your piece. B is the control leg."
+ },
+ "U1": {
+  "id": "U1",
+  "name": "Music Chip",
+  "emoji": "🎵",
+  "len": 3,
+  "tall": 2,
+  "color": "#f9c74f",
+  "pins": {
+   "+": [
+    0,
+    0
+   ],
+   "−": [
+    0,
+    1
+   ],
+   "OUT": [
+    2,
+    1
+   ]
+  },
+  "what": "A chip with a song inside.",
+  "why": "Give it power and it plays music through a speaker.",
+  "how": "Match the + and − to the battery. OUT goes to the speaker."
+ },
+ "U2": {
+  "id": "U2",
+  "name": "Alarm Chip",
+  "emoji": "🚨",
+  "len": 3,
+  "tall": 2,
+  "color": "#f94144",
+  "pins": {
+   "+": [
+    0,
+    0
+   ],
+   "−": [
+    0,
+    1
+   ],
+   "OUT": [
+    2,
+    1
+   ]
+  },
+  "what": "A chip that makes siren sounds.",
+  "why": "Give it power and it wails like a fire truck.",
+  "how": "Match the + and − to the battery. OUT goes to the speaker."
+ },
+ "U3": {
+  "id": "U3",
+  "name": "Space Chip",
+  "emoji": "🚀",
+  "len": 3,
+  "tall": 2,
+  "color": "#577590",
+  "pins": {
+   "+": [
+    0,
+    0
+   ],
+   "−": [
+    0,
+    1
+   ],
+   "OUT": [
+    2,
+    1
+   ]
+  },
+  "what": "A chip full of space-battle sounds.",
+  "why": "Every press makes a new laser or rocket noise.",
+  "how": "Match the + and − to the battery. OUT goes to the speaker."
+ }
+}

@@ -1,0 +1,2262 @@
+[
+ {
+  "id": 1,
+  "title": "Light On!",
+  "emoji": "💡",
+  "level": 1,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1
+     }
+    ],
+    "say": "Snap the slide switch next to the battery."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Add two wires to turn the corner."
+   },
+   {
+    "add": [
+     {
+      "p": "L1",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 3
+     }
+    ],
+    "say": "Snap in the lamp and a wire."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Close the loop with two more wires. Electricity needs a full circle!"
+   },
+   {
+    "go": true,
+    "say": "Slide the switch ON. The lamp glows! Slide it OFF when you are done."
+   }
+  ]
+ },
+ {
+  "id": 2,
+  "title": "Push Button Light",
+  "emoji": "🔘",
+  "level": 1,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "S2",
+      "x": 3,
+      "y": 1
+     }
+    ],
+    "say": "This time use the PRESS switch. It only works while you hold it."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Two wires turn the corner."
+   },
+   {
+    "add": [
+     {
+      "p": "L1",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 3
+     }
+    ],
+    "say": "Lamp and a wire on the bottom row."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Close the loop with two more wires. Electricity needs a full circle!"
+   },
+   {
+    "go": true,
+    "say": "Press the button. Light! Let go. Dark! Try blinking it fast."
+   }
+  ]
+ },
+ {
+  "id": 3,
+  "title": "Red LED",
+  "emoji": "🔴",
+  "level": 1,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1
+     }
+    ],
+    "say": "Switch and a wire on the top row."
+   },
+   {
+    "add": [
+     {
+      "p": "R1",
+      "x": 5,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "W2",
+      "x": 5,
+      "y": 2,
+      "v": true
+     }
+    ],
+    "say": "The resistor is a speed bump. It keeps the LED safe. Then a wire."
+   },
+   {
+    "add": [
+     {
+      "p": "D1",
+      "x": 3,
+      "y": 3,
+      "flip": true
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 3
+     }
+    ],
+    "say": "Snap the red LED. Its + side points RIGHT, toward the battery +."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Close the loop with two more wires. Electricity needs a full circle!"
+   },
+   {
+    "go": true,
+    "say": "Slide ON. A red glow! If it stays dark, turn the LED around."
+   }
+  ]
+ },
+ {
+  "id": 4,
+  "title": "Spinning Fan",
+  "emoji": "🌀",
+  "level": 1,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Switch, wire, and a wire going down."
+   },
+   {
+    "add": [
+     {
+      "p": "M1",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 3
+     }
+    ],
+    "say": "Snap the motor. Put the fan on top of it. Keep fingers away!"
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Close the loop with two more wires. Electricity needs a full circle!"
+   },
+   {
+    "go": true,
+    "say": "Slide ON. Whoosh! The fan spins. Feel the breeze with your hand (not your face)."
+   }
+  ]
+ },
+ {
+  "id": 5,
+  "title": "Flying Saucer",
+  "emoji": "🛸",
+  "level": 1,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "S2",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Press switch, then two wires."
+   },
+   {
+    "add": [
+     {
+      "p": "M1",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 3
+     }
+    ],
+    "say": "Motor on the bottom row. Set the fan on top, loose, not pushed down."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Close the loop with two more wires. Electricity needs a full circle!"
+   },
+   {
+    "go": true,
+    "say": "Hold the button until the fan is fast. LET GO. The fan flies up like a saucer! Keep faces away."
+   }
+  ]
+ },
+ {
+  "id": 6,
+  "title": "Lamp and Fan Together",
+  "emoji": "💡🌀",
+  "level": 2,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1
+     }
+    ],
+    "say": "Switch and a wire on top."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "A tall wall of two wires on the right."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "p": "L1",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     }
+    ],
+    "say": "Middle row: wire, lamp, wire."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 5
+     },
+     {
+      "p": "M1",
+      "x": 3,
+      "y": 5
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 5
+     }
+    ],
+    "say": "Bottom row: wire, motor with fan, wire."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "Two wires on the left. Now there are TWO loops side by side. That is called parallel."
+   },
+   {
+    "go": true,
+    "say": "Slide ON. The lamp glows AND the fan spins. Each one gets its own road!"
+   }
+  ]
+ },
+ {
+  "id": 7,
+  "title": "Dimmer Light",
+  "emoji": "🎚️",
+  "level": 2,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "RV",
+      "x": 3,
+      "y": 1
+     }
+    ],
+    "say": "Snap the knob piece. It has 3 snaps. We use the left one and the middle one."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 4,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "A wire from the MIDDLE snap going down."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "p": "L1",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "p": "W2",
+      "x": 1,
+      "y": 3
+     }
+    ],
+    "say": "Bottom row: wire, lamp, wire."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "One more wire on the left closes the loop."
+   },
+   {
+    "go": true,
+    "say": "Turn the knob slowly. Bright... dim... bright! A bigger speed bump means less light."
+   }
+  ]
+ },
+ {
+  "id": 8,
+  "title": "Fan Speed Knob",
+  "emoji": "🌀🎚️",
+  "level": 2,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "RV",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "W3",
+      "x": 4,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Knob piece, then a wire from its MIDDLE snap going down."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "p": "M1",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "p": "W2",
+      "x": 1,
+      "y": 3
+     }
+    ],
+    "say": "Bottom row: wire, motor with fan, wire."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Close the loop on the left."
+   },
+   {
+    "go": true,
+    "say": "Turn the knob. Slow fan... fast fan! If the fan does not start, give it a tiny push."
+   }
+  ]
+ },
+ {
+  "id": 9,
+  "title": "Two Switches, One Light",
+  "emoji": "🔀🔘",
+  "level": 2,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "S2",
+      "x": 4,
+      "y": 1
+     }
+    ],
+    "say": "Slide switch, then press switch, in a row."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "A wire going down."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "p": "L1",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     }
+    ],
+    "say": "Bottom row: wire, lamp, wire."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Close the loop."
+   },
+   {
+    "go": true,
+    "say": "Slide ON and press the button. Both gates must be open for the light. Try just one. Dark!"
+   }
+  ]
+ },
+ {
+  "id": 10,
+  "title": "Either Switch Works",
+  "emoji": "🔀🔘✨",
+  "level": 2,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1
+     }
+    ],
+    "say": "Slide switch on the top row."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 3,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "S2",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "A second road under it: wire down, press switch, wire up. Two roads around one spot!"
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Wires turn the corner."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "p": "L1",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Lamp row and the left wire close the loop."
+   },
+   {
+    "go": true,
+    "say": "Slide ON: light. Slide OFF and press the button: light too! Either road works."
+   }
+  ]
+ },
+ {
+  "id": 11,
+  "title": "Music Box",
+  "emoji": "🎵",
+  "level": 2,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "U1",
+      "x": 3,
+      "y": 2
+     }
+    ],
+    "say": "This big chip has a song inside. Its + corner goes near the battery +."
+   },
+   {
+    "add": [
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "A switch standing up joins the battery + to the chip +."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Wires from the chip − back to the battery −."
+   },
+   {
+    "add": [
+     {
+      "p": "SP",
+      "x": 5,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "The speaker hangs off the OUT corner."
+   },
+   {
+    "add": [
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "p": "W2",
+      "x": 1,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "A long wire brings the speaker back to −."
+   },
+   {
+    "go": true,
+    "say": "Slide ON. Music! Slide OFF and ON to start the song again."
+   }
+  ]
+ },
+ {
+  "id": 12,
+  "title": "Doorbell",
+  "emoji": "🚪",
+  "level": 2,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "U1",
+      "x": 3,
+      "y": 2
+     }
+    ],
+    "say": "The music chip again. + corner near the battery +."
+   },
+   {
+    "add": [
+     {
+      "p": "S2",
+      "x": 3,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "A press switch standing up. This is the doorbell button."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Wires from the chip − to the battery −."
+   },
+   {
+    "add": [
+     {
+      "p": "SP",
+      "x": 5,
+      "y": 3,
+      "v": true
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "p": "W2",
+      "x": 1,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "Speaker on OUT, and wires back to −."
+   },
+   {
+    "go": true,
+    "say": "Ding dong! Press the button to ring. Who is at the door?"
+   }
+  ]
+ },
+ {
+  "id": 13,
+  "title": "Siren",
+  "emoji": "🚨",
+  "level": 2,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "U2",
+      "x": 3,
+      "y": 2
+     }
+    ],
+    "say": "The alarm chip. + corner near the battery +."
+   },
+   {
+    "add": [
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Slide switch standing up."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Wires from − to −."
+   },
+   {
+    "add": [
+     {
+      "p": "SP",
+      "x": 5,
+      "y": 3,
+      "v": true
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "p": "W2",
+      "x": 1,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "Speaker on OUT, wires back."
+   },
+   {
+    "go": true,
+    "say": "Slide ON. Wee-oo wee-oo! Fire truck coming through!"
+   }
+  ]
+ },
+ {
+  "id": 14,
+  "title": "Space Sounds",
+  "emoji": "🚀",
+  "level": 2,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "U3",
+      "x": 3,
+      "y": 2
+     }
+    ],
+    "say": "The space chip. + corner near the battery +."
+   },
+   {
+    "add": [
+     {
+      "p": "S2",
+      "x": 3,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Press switch standing up."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Wires from − to −."
+   },
+   {
+    "add": [
+     {
+      "p": "SP",
+      "x": 5,
+      "y": 3,
+      "v": true
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "p": "W2",
+      "x": 1,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "Speaker on OUT, wires back."
+   },
+   {
+    "go": true,
+    "say": "Press, press, press! Every press is a new space sound. Pew pew!"
+   }
+  ]
+ },
+ {
+  "id": 15,
+  "title": "Quiet Siren",
+  "emoji": "📣",
+  "level": 2,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "U2",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Alarm chip and a slide switch standing up."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Wires from − to −."
+   },
+   {
+    "add": [
+     {
+      "p": "WC",
+      "x": 5,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "The whistle chip is a baby speaker. Put it on OUT."
+   },
+   {
+    "add": [
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "p": "W2",
+      "x": 1,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "Wires back to −."
+   },
+   {
+    "go": true,
+    "say": "Slide ON. A tiny siren! Hold it near your ear. Why is it quieter than the big speaker?"
+   }
+  ]
+ },
+ {
+  "id": 16,
+  "title": "Volume Knob",
+  "emoji": "🎵🎚️",
+  "level": 2,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "U1",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Music chip and a slide switch standing up."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Wires from − to −."
+   },
+   {
+    "add": [
+     {
+      "p": "RV",
+      "x": 5,
+      "y": 3
+     }
+    ],
+    "say": "The knob piece starts on the OUT corner."
+   },
+   {
+    "add": [
+     {
+      "p": "SP",
+      "x": 6,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "Speaker hangs from the MIDDLE snap of the knob."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 5,
+      "y": 4
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "p": "W2",
+      "x": 1,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "Wires bring it all back to −."
+   },
+   {
+    "go": true,
+    "say": "Slide ON and turn the knob. Loud... soft... loud! The speed bump is squeezing the sound."
+   }
+  ]
+ },
+ {
+  "id": 17,
+  "title": "Peek-a-boo Light",
+  "emoji": "🌞💡",
+  "level": 3,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "Q2",
+      "x": 3,
+      "y": 3
+     }
+    ],
+    "say": "The transistor: a magic helper with legs C, B and E. Match the letters on your piece."
+   },
+   {
+    "add": [
+     {
+      "p": "L1",
+      "x": 3,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "W2",
+      "x": 3,
+      "y": 2,
+      "v": true
+     }
+    ],
+    "say": "Lamp standing up from the battery +, then a wire down to leg C."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "RP",
+      "x": 4,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "W3",
+      "x": 4,
+      "y": 2,
+      "v": true
+     }
+    ],
+    "say": "Wire, then the light sensor standing up, then a wire down to leg B."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 3,
+      "v": true
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 5
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "From leg E, wires go all the way around back to the battery −."
+   },
+   {
+    "go": true,
+    "say": "The lamp is on in the light. Cover the sensor with your hand. Peek-a-boo, it goes dark!"
+   }
+  ]
+ },
+ {
+  "id": 18,
+  "title": "Sunshine Music",
+  "emoji": "🌞🎵",
+  "level": 3,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "U1",
+      "x": 3,
+      "y": 2
+     }
+    ],
+    "say": "Music chip, + corner near the battery +."
+   },
+   {
+    "add": [
+     {
+      "p": "RP",
+      "x": 3,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "The light sensor standing up is our switch this time!"
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Wires from − to −."
+   },
+   {
+    "add": [
+     {
+      "p": "SP",
+      "x": 5,
+      "y": 3,
+      "v": true
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "p": "W2",
+      "x": 1,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "Speaker on OUT, wires back."
+   },
+   {
+    "go": true,
+    "say": "Music plays in the light. Cover the sensor... silence. Uncover... music! Is the room bright enough?"
+   }
+  ]
+ },
+ {
+  "id": 19,
+  "title": "Fading Light",
+  "emoji": "🪣💡",
+  "level": 3,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "S2",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1
+     }
+    ],
+    "say": "Press switch and a wire."
+   },
+   {
+    "add": [
+     {
+      "p": "C4",
+      "x": 5,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "W2",
+      "x": 5,
+      "y": 2,
+      "v": true
+     }
+    ],
+    "say": "The capacitor is a bucket for electricity. Its + goes on TOP. Then a wire down."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "p": "R1",
+      "x": 7,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "D1",
+      "x": 7,
+      "y": 2,
+      "v": true
+     }
+    ],
+    "say": "Wire to the right, then resistor and red LED going down. LED + on top."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Wires along the bottom and up the left."
+   },
+   {
+    "go": true,
+    "say": "Hold the button and count to 3. Let go. The LED stays on and slowly fades. The bucket is emptying!"
+   }
+  ]
+ },
+ {
+  "id": 20,
+  "title": "Red Light, Green Light",
+  "emoji": "🔴🟢",
+  "level": 3,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "R1",
+      "x": 3,
+      "y": 1
+     }
+    ],
+    "say": "One resistor protects both LEDs."
+   },
+   {
+    "add": [
+     {
+      "p": "S1",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "p": "W2",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "p": "D1",
+      "x": 6,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "W2",
+      "x": 6,
+      "y": 2,
+      "v": true
+     },
+     {
+      "p": "W2",
+      "x": 5,
+      "y": 3
+     }
+    ],
+    "say": "Top road: slide switch, wire, RED LED going down (+ on top), wires back."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "S2",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "p": "D2",
+      "x": 5,
+      "y": 2,
+      "v": true
+     }
+    ],
+    "say": "Lower road: wire down, press switch, GREEN LED going down (+ on top)."
+   },
+   {
+    "add": [
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Bottom and left wires close both loops."
+   },
+   {
+    "go": true,
+    "say": "Slide ON = red light, STOP! Press the button = green light, GO! Play the game with a friend."
+   }
+  ]
+ },
+ {
+  "id": 21,
+  "title": "Magic Helper Switch",
+  "emoji": "🪄",
+  "level": 3,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "Q2",
+      "x": 3,
+      "y": 3
+     }
+    ],
+    "say": "The transistor, our magic helper. Legs C, B and E."
+   },
+   {
+    "add": [
+     {
+      "p": "R1",
+      "x": 3,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "D1",
+      "x": 3,
+      "y": 2,
+      "v": true
+     }
+    ],
+    "say": "Resistor, then red LED going down to leg C. LED + on top."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "R4",
+      "x": 4,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "S2",
+      "x": 4,
+      "y": 2,
+      "v": true
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "Wire, big resistor, press switch, wire down to leg B. Only a trickle goes this way."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 3,
+      "v": true
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 5
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "From leg E, wires go all the way back to the battery −."
+   },
+   {
+    "go": true,
+    "say": "Press the button. A tiny trickle into B lets the LED light up. The helper did the hard work!"
+   }
+  ]
+ },
+ {
+  "id": 22,
+  "title": "Party Time",
+  "emoji": "🎉",
+  "level": 3,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1
+     }
+    ],
+    "say": "Switch and a wire on top."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 5,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 2,
+      "v": true
+     },
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 4,
+      "v": true
+     }
+    ],
+    "say": "A tall wall of three wires on the right."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "p": "L1",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 2
+     }
+    ],
+    "say": "Row one: wire, lamp, wire."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 4
+     },
+     {
+      "p": "M1",
+      "x": 3,
+      "y": 4
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 4
+     }
+    ],
+    "say": "Row two: wire, motor with fan, wire."
+   },
+   {
+    "add": [
+     {
+      "p": "R1",
+      "x": 4,
+      "y": 6
+     },
+     {
+      "p": "D1",
+      "x": 3,
+      "y": 6,
+      "flip": true
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 6
+     }
+    ],
+    "say": "Row three: resistor, red LED (+ on the right), wire."
+   },
+   {
+    "add": [
+     {
+      "p": "W2",
+      "x": 1,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 2,
+      "v": true
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 4,
+      "v": true
+     }
+    ],
+    "say": "Three wires on the left. Three roads, all in parallel!"
+   },
+   {
+    "go": true,
+    "say": "Slide ON. Lamp, fan AND LED all at once. It is a party!"
+   }
+  ]
+ },
+ {
+  "id": 23,
+  "title": "Fire Truck",
+  "emoji": "🚒",
+  "level": 3,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "U2",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "p": "S1",
+      "x": 3,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Alarm chip and a slide switch standing up."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Wires from − to −."
+   },
+   {
+    "add": [
+     {
+      "p": "SP",
+      "x": 5,
+      "y": 3,
+      "v": true
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "p": "W2",
+      "x": 1,
+      "y": 3,
+      "v": true
+     }
+    ],
+    "say": "Speaker on OUT, wires back."
+   },
+   {
+    "add": [
+     {
+      "p": "W4",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "p": "L1",
+      "x": 6,
+      "y": 2,
+      "v": true
+     },
+     {
+      "p": "W2",
+      "x": 6,
+      "y": 3,
+      "v": true
+     },
+     {
+      "p": "W2",
+      "x": 5,
+      "y": 4
+     }
+    ],
+    "say": "A long wire over the chip, a lamp going down, and wires back to −."
+   },
+   {
+    "go": true,
+    "say": "Slide ON. Siren AND a light! Wee-oo! Make way for the fire truck!"
+   }
+  ]
+ },
+ {
+  "id": 24,
+  "title": "Count-down Light",
+  "emoji": "⏳",
+  "level": 3,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "Q2",
+      "x": 3,
+      "y": 3
+     }
+    ],
+    "say": "The transistor helper. Legs C, B and E."
+   },
+   {
+    "add": [
+     {
+      "p": "R1",
+      "x": 3,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "D1",
+      "x": 3,
+      "y": 2,
+      "v": true
+     }
+    ],
+    "say": "Resistor and red LED going down to leg C. LED + on top."
+   },
+   {
+    "add": [
+     {
+      "p": "S2",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "p": "C4",
+      "x": 5,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "W2",
+      "x": 5,
+      "y": 2,
+      "v": true
+     }
+    ],
+    "say": "Press switch, wire, then the capacitor bucket going down (+ on top) and a wire."
+   },
+   {
+    "add": [
+     {
+      "p": "R4",
+      "x": 4,
+      "y": 1,
+      "v": true
+     },
+     {
+      "p": "W3",
+      "x": 4,
+      "y": 2,
+      "v": true
+     }
+    ],
+    "say": "Big resistor going down from the switch, then a wire to leg B."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 3,
+      "v": true
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 5
+     },
+     {
+      "p": "W5",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "From leg E, wires all the way back to the battery −."
+   },
+   {
+    "go": true,
+    "say": "Press to fill the bucket. Let go and count: 3... 2... 1... The LED fades out by itself!"
+   }
+  ]
+ },
+ {
+  "id": 25,
+  "title": "Secret Messages",
+  "emoji": "🕵️",
+  "level": 1,
+  "steps": [
+   {
+    "add": [
+     {
+      "p": "B1",
+      "x": 1,
+      "y": 1,
+      "flip": true
+     }
+    ],
+    "say": "Snap the battery here. The red + goes on the RIGHT."
+   },
+   {
+    "add": [
+     {
+      "p": "S2",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "p": "W3",
+      "x": 5,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Press switch and two wires."
+   },
+   {
+    "add": [
+     {
+      "p": "L1",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "p": "W2",
+      "x": 4,
+      "y": 3
+     }
+    ],
+    "say": "Lamp and a wire."
+   },
+   {
+    "add": [
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "p": "W3",
+      "x": 1,
+      "y": 1,
+      "v": true
+     }
+    ],
+    "say": "Close the loop with two more wires. Electricity needs a full circle!"
+   },
+   {
+    "go": true,
+    "say": "Short press = dot. Long press = dash. SOS is dot dot dot, dash dash dash, dot dot dot. Send a secret message!"
+   }
+  ]
+ }
+]

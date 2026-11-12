@@ -1,0 +1,22 @@
+/*
+  The one mapping file (ADR-0010): shadcn variable names -> semantic tokens (specs/_conventions.md section 11).
+  Components never hold colour, radius or size values; they read tokens through Tailwind utilities.
+  Not mapped on purpose: secondary, accent (no equivalent), destructive (unused), chart and sidebar variables.
+  Open (Q-C9): `background` is the canvas here, as the planner runs it.
+*/
+:root {
+  --background: var(--shamallya-semantic-color-surface-canvas);
+  --foreground: var(--shamallya-semantic-color-text-default);
+  --card: var(--shamallya-semantic-color-surface-raised);
+  --card-foreground: var(--shamallya-semantic-color-text-default);
+  --popover: var(--shamallya-semantic-color-surface-raised);
+  --popover-foreground: var(--shamallya-semantic-color-text-default);
+  --primary: var(--shamallya-semantic-color-primary-default);
+  --primary-foreground: var(--shamallya-semantic-color-primary-on);
+  --muted: var(--shamallya-semantic-color-surface-sunken);
+  --muted-foreground: var(--shamallya-semantic-color-text-muted);
+  --border: var(--shamallya-semantic-color-border-default);
+  --input: var(--shamallya-semantic-color-border-strong);
+  --ring: var(--shamallya-semantic-color-focus-ring);
+  --radius: var(--shamallya-semantic-radius-control);
+}
