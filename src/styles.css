@@ -66,9 +66,9 @@ main {
 .piece .plus {
   font-size: 16px;
   font-weight: 600;
-  fill: #fff;
+  fill: #d00;
   paint-order: stroke;
-  stroke: #d00;
+  stroke: #fff;
   stroke-width: 4px;
 }
 .piece .pin {
@@ -294,8 +294,14 @@ header[class] :is(a, h1, p, div, span) {
 .need .big-emoji {
   font-size: 2rem;
 }
+.need .piece-img {
+  width: 100%;
+  height: 56px;
+  object-fit: contain;
+}
 .need[aria-pressed="true"] {
-  background: var(--accent);
+  background: #fff3cf;
+  border-color: var(--accent2);
 }
 .needs-page .stage {
   margin-top: 8px;
@@ -356,4 +362,96 @@ header[class] :is(a, h1, p, div, span) {
   min-height: 56px;
   white-space: nowrap;
   padding-inline: 8px;
+}
+
+/* white title on the fur header (large bold text; the eyebrow stays ink) */
+.brand header[class] h1[class] {
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(2, 48, 71, 0.45);
+}
+
+/* project tiles: square, tag and star in a footer, one fixed emoji box */
+.cards > a {
+  aspect-ratio: 1;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+.tile-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 2.75rem;
+  font-size: 1.9rem;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* buttons: a shade of Sparky's fur, with ink text (white on orange is too faint) */
+:root:root {
+  --shamallya-semantic-color-primary-default: var(--fur);
+  --shamallya-semantic-color-primary-hover: #d4721a;
+  --shamallya-semantic-color-primary-active: #b85f12;
+  --shamallya-semantic-color-primary-on: var(--ink);
+}
+
+/* celebration at the last step: confetti falls once, over the page */
+.celebrate {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 20;
+}
+.celebrate i {
+  position: absolute;
+  top: -24px;
+  width: 10px;
+  height: 14px;
+  border-radius: 2px;
+  background: var(--c);
+  opacity: 0;
+  animation: confetti 2.6s ease-in forwards;
+}
+.celebrate i:nth-child(3n) { --c: #fb8500; }
+.celebrate i:nth-child(3n + 1) { --c: #ffb703; }
+.celebrate i:nth-child(3n + 2) { --c: #219ebc; }
+.celebrate i:nth-child(4n) { border-radius: 50%; width: 12px; height: 12px; }
+.celebrate i:nth-child(1) { left: 6%; animation-delay: 0s; }
+.celebrate i:nth-child(2) { left: 14%; animation-delay: 0.3s; }
+.celebrate i:nth-child(3) { left: 22%; animation-delay: 0.1s; }
+.celebrate i:nth-child(4) { left: 30%; animation-delay: 0.5s; }
+.celebrate i:nth-child(5) { left: 38%; animation-delay: 0.2s; }
+.celebrate i:nth-child(6) { left: 46%; animation-delay: 0.6s; }
+.celebrate i:nth-child(7) { left: 54%; animation-delay: 0.05s; }
+.celebrate i:nth-child(8) { left: 62%; animation-delay: 0.4s; }
+.celebrate i:nth-child(9) { left: 70%; animation-delay: 0.15s; }
+.celebrate i:nth-child(10) { left: 78%; animation-delay: 0.55s; }
+.celebrate i:nth-child(11) { left: 86%; animation-delay: 0.25s; }
+.celebrate i:nth-child(12) { left: 94%; animation-delay: 0.45s; }
+.celebrate i:nth-child(13) { left: 10%; animation-delay: 0.8s; }
+.celebrate i:nth-child(14) { left: 34%; animation-delay: 0.9s; }
+.celebrate i:nth-child(15) { left: 58%; animation-delay: 0.75s; }
+.celebrate i:nth-child(16) { left: 82%; animation-delay: 0.95s; }
+@keyframes confetti {
+  0% { opacity: 1; transform: translateY(0) rotate(0); }
+  100% { opacity: 1; transform: translateY(105vh) rotate(540deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .celebrate { display: none; }
+}
+
+/* Sparky hops with the confetti on the last step */
+.sparky-body.hop {
+  display: inline-block;
+  animation: hop 0.6s ease-in-out 5;
+}
+@keyframes hop {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-24px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sparky-body.hop { animation: none; }
 }

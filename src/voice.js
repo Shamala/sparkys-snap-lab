@@ -3,7 +3,7 @@
 // when a clip is missing (e.g. a brand-new project), with a simple flap for the mouth.
 import { useSyncExternalStore } from 'react'
 import { VOICE_URL } from './services.js'
-export { clipName } from './clipName.js'
+export { clipName, partSpeech } from './clipName.js'
 
 let lips // { step: ms per level, clips: { name: '0012456320...' } }
 fetch(`${VOICE_URL}/lips.json`).then((r) => r.json()).then((j) => { lips = j }).catch(() => {})

@@ -6,7 +6,8 @@
 import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 import PROJECTS from '../services/content/projects.json' with { type: 'json' }
-import { clipName } from '../src/clipName.js'
+import PARTS from '../services/content/parts.json' with { type: 'json' }
+import { clipName, partSpeech } from '../src/clipName.js'
 
 const OUT = 'services/voice'
 const LOUD = 'loudnorm=I=-20.5:TP=-3:LRA=11' // calm speech loudness: -16 was a little loud for kids
@@ -14,6 +15,7 @@ mkdirSync(OUT, { recursive: true })
 
 const jobs = []
 for (const p of PROJECTS) p.steps.forEach((s, i) => jobs.push([clipName(p, i), s.say]))
+for (const [key, part] of Object.entries(PARTS)) jobs.push([clipName(key), partSpeech(part)]) // Things you need: Sparky explains a piece
 const todo = jobs.filter(([name]) => !existsSync(`${OUT}/${name}.m4a`))
 console.log(`${todo.length} clips to render (${jobs.length - todo.length} already done)`)
 if (process.argv[2] === '--limit') todo.length = Math.min(todo.length, +process.argv[3])

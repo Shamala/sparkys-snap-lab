@@ -16,7 +16,7 @@ import { ProgressDots } from '@/shamallya/components/progress-dots'
 import { AnnounceProvider, useAnnounce } from '@/shamallya/components/announce'
 import Board from './Board.jsx'
 import { CONTENT_URL, SPARKY_URL } from './services.js'
-import { say, stop, clipName, useMouth } from './voice.js'
+import { say, stop, clipName, partSpeech, useMouth } from './voice.js'
 
 const ls = {
   get: (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d } catch { return d } },
@@ -128,7 +128,10 @@ function Home({ projects }) {
   )
 }
 
-const card = (p) => <GlossaryCard key={p.id} emoji={p.emoji} name={p.name} id={p.id} what={p.what} why={p.why} how={p.how} />
+// Pictures of the real kit pieces (public/parts). Pieces without one (music, alarm and space chips) keep their emoji.
+const HAS_IMG = new Set('W2 W3 W4 W5 B1 S1 S2 L1 D1 D2 M1 SP WC R1 R4 RV RP C4 Q2'.split(' '))
+
+const card = (p) => <GlossaryCard key={p.id} emoji={p.emoji} imgSrc={HAS_IMG.has(p.id) ? `/parts/${p.id}.png` : undefined} name={p.name} id={p.id} what={p.what} why={p.why} how={p.how} />
 
 function Parts({ parts }) {
   return (
@@ -154,10 +157,23 @@ const muteToggle = (voice, toggle) => (
 function Needs({ project, parts }) {
   const [voice, toggle] = useVoice()
   const [picked, setPicked] = useState(null)
+  const [talking, setTalking] = useState(false)
   const count = {}
   for (const s of project.steps) for (const pc of s.add || []) count[pc.p] = (count[pc.p] || 0) + 1
   const keys = Object.keys(count).sort((a, b) => (a[0] === 'W') - (b[0] === 'W'))
   const part = picked && parts[picked]
+  const speech = part && { name: clipName(picked), text: partSpeech(part) }
+  const play = () => { setTalking(true); say([speech], voice, () => setTalking(false)) }
+  const pause = () => { stop(); setTalking(false) }
+  // Sparky stops when another piece is picked, when the user taps anything else, and on leaving the page.
+  useEffect(() => { stop(); setTalking(false) }, [picked])
+  useEffect(() => stop, [])
+  useEffect(() => {
+    if (!talking) return
+    const off = (e) => { if (!e.target.closest?.('[data-speak]')) pause() }
+    document.addEventListener('click', off, true)
+    return () => document.removeEventListener('click', off, true)
+  }, [talking])
   return (
     <>
       <PushedHeader back={{ origin: 'Home', href: '#' }} title={`${project.emoji} ${project.title}`} meta="Things you need"
@@ -167,7 +183,9 @@ function Needs({ project, parts }) {
           {keys.map((k) => (
             <li key={k}>
               <button type="button" className="need" aria-pressed={picked === k} onClick={() => setPicked(picked === k ? null : k)}>
-                <span className="big-emoji" aria-hidden="true">{parts[k].emoji}</span>
+                {HAS_IMG.has(k)
+                  ? <img className="piece-img" src={`/parts/${k}.png`} alt="" loading="lazy" />
+                  : <span className="big-emoji" aria-hidden="true">{parts[k].emoji}</span>}
                 <span>{parts[k].name}</span>
                 <b>× {count[k]}</b>
               </button>
@@ -181,9 +199,14 @@ function Needs({ project, parts }) {
               {part ? (
                 <>
                   <b>{part.emoji} {part.name}</b>
-                  <br /><b>What?</b> {part.what}
-                  <br /><b>Why?</b> {part.why}
-                  <br /><b>How?</b> {part.how}
+                  <br />{part.what} {part.why} {part.how}
+                  {voice && (
+                    <div data-speak className="mt-2">
+                      {talking
+                        ? <Button variant="outline" leadingIcon={<Pause />} onClick={pause}>Pause</Button>
+                        : <Button variant="primary" leadingIcon={<Play />} onClick={play}>Play</Button>}
+                    </div>
+                  )}
                 </>
               ) : 'Tap a piece and I will tell you all about it!'}
             </SpeechBubble>
@@ -204,7 +227,7 @@ const MOVES = [
 ]
 const WORDS = ['Woof!', 'Arf arf!', 'Yip yip!', 'Wag wag!', 'Hi friend!', "Let's snap!"]
 
-function Sparky({ hidden }) {
+function Sparky({ hidden, celebrate }) {
   const el = useRef(null)
   const [word, setWord] = useState(null)
   const mouth = useMouth()
@@ -216,13 +239,20 @@ function Sparky({ hidden }) {
   }
   return (
     <button type="button" className="sparky-btn" aria-label="Pet Sparky" onClick={poke}>
-      <span ref={el} className="sparky-body">
+      <span ref={el} className={`sparky-body${celebrate ? ' hop' : ''}`}>
         <Mascot className="mascot" src={`${SPARKY_URL}/sparky-svg.svg`} mouth={mouth} />
       </span>
       {word && <span key={word.n} className="burst" aria-hidden="true">{word.t}</span>}
     </button>
   )
 }
+
+// Confetti that falls once when the last step shows. Decorative; hidden for prefers-reduced-motion in CSS.
+const Celebrate = () => (
+  <div className="celebrate" aria-hidden="true">
+    {Array.from({ length: 16 }, (_, n) => <i key={n} />)}
+  </div>
+)
 
 function Project({ project, parts }) {
   const steps = project.steps
@@ -259,12 +289,13 @@ function Project({ project, parts }) {
   return (
     <>
       <PushedHeader back={{ origin: 'Things you need', href: `#p/${project.id}` }} title={`${project.emoji} ${project.title}`}
-        meta={<ProgressDots current={i + 1} total={steps.length} className="mt-2 flex-wrap" />}
+        meta={<ProgressDots current={i + 1} total={steps.length} className="mt-1 flex-wrap" />}
         trailing={muteToggle(voice, toggleVoice)} />
       <main className="project">
+        {last && <Celebrate />}
         <Board pieces={pieces} fresh={step.add || []} live={last} parts={parts} />
         <section className="stage">
-          <Sparky hidden={!voice} />
+          <Sparky hidden={!voice} celebrate={last} />
           <div className="dialogs">
             <SpeechBubble variant={last ? 'party' : 'say'} tail={voice}>{step.say}</SpeechBubble>
             {last && <p className="yay">🎉 You did it! ⭐</p>}

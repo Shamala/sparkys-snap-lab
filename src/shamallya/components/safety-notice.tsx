@@ -1,4 +1,5 @@
 import { useId, useState, type ReactNode } from "react";
+import { TriangleAlert } from "lucide-react";
 import { Button } from "./button";
 import { cn } from "@/lib/cn";
 
@@ -19,13 +20,13 @@ export function SafetyNotice({ label, children, defaultOpen = false, className }
   const id = useId();
   return (
     <div className={cn("flex flex-col items-start gap-stack-sm font-body leading-normal", className)}>
-      <Button variant="outline" aria-expanded={open} aria-controls={id} onClick={() => setOpen((o) => !o)}>
+      <Button variant="outline" className="border-red-600 text-red-700 hover:text-red-800" leadingIcon={<TriangleAlert className="text-red-600" />} aria-expanded={open} aria-controls={id} onClick={() => setOpen((o) => !o)}>
         {label}
       </Button>
       <div
         id={id}
         hidden={!open}
-        className="w-full rounded-card border-bw-default border-warning bg-warning-subtle p-inset-md text-ui-reading text-warning-text [&_ul]:list-disc [&_ul]:ps-inset-md"
+        className="w-full rounded-card border-bw-default border-red-600 bg-red-50 p-inset-md text-ui-reading text-red-800 [&_ul]:list-disc [&_ul]:ps-inset-md"
       >
         {children}
       </div>

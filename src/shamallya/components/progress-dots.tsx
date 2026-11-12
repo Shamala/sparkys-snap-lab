@@ -12,13 +12,13 @@ export type ProgressDotsProps = {
 
 export function ProgressDots({ current, total, className }: ProgressDotsProps) {
   return (
-    <div className={cn("flex items-center gap-gap-sm", className)}>
+    <div className={cn("flex items-center justify-start gap-x-gap-sm gap-y-gap-sm py-1 leading-none", className)}>
       <span className="sr-only">{`Step ${current} of ${total}`}</span>
       {Array.from({ length: total }, (_, i) => (
         <span
           key={i}
           aria-hidden="true"
-          className={cn("size-dot rounded-pill border-bw-default", i < current ? "border-primary bg-primary forced-color-adjust-none forced-colors:bg-[Highlight]" : "border-border-strong bg-surface-raised")}
+          className={cn("size-dot shrink-0 rounded-pill border-bw-default", i < current ? "border-primary bg-primary forced-color-adjust-none forced-colors:bg-[Highlight]" : "border-border-strong bg-surface-raised")}
         />
       ))}
     </div>
