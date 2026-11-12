@@ -100,7 +100,7 @@ function Home({ projects }) {
   return (
     <>
       <div className="brand">
-        <img src={`${SPARKY_URL}/sparky-svg.svg`} alt="" width="72" height="72" />
+        <img src={`${SPARKY_URL}/sparky-bandana.svg`} alt="" width="72" height="72" />
         <ScreenHeader title="Sparky's Snap Lab" eyebrow="Snap circuit projects for kids" />
       </div>
       <main className="home with-footer">
@@ -240,7 +240,7 @@ function Sparky({ hidden, celebrate }) {
   return (
     <button type="button" className="sparky-btn" aria-label="Pet Sparky" onClick={poke}>
       <span ref={el} className={`sparky-body${celebrate ? ' hop' : ''}`}>
-        <Mascot className="mascot" src={`${SPARKY_URL}/sparky-svg.svg`} mouth={mouth} />
+        <Mascot className="mascot" src={`${SPARKY_URL}/sparky-bandana.svg`} mouth={mouth} />
       </span>
       {word && <span key={word.n} className="burst" aria-hidden="true">{word.t}</span>}
     </button>

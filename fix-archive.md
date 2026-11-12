@@ -49,8 +49,22 @@
 
 29. Things You Need page: when a piece is selected, change its highlight to a subtler colour.
 
-30. Build page: on the battery, make the plus sign red.
 
 ### Completed 2026-11-12 (developer pass 4, not run or built)
 
 31. Extend the celebration (item 27): Sparky hops repeatedly on the project page at the last step, together with the confetti. Respects reduced motion.
+
+### Completed 2026-11-12 (developer pass 3)
+
+23. Things You Need: the content is correct, but Sparky still reads it out with the labels "what, why, how". Read the content without those labels.
+24. Change the title "Snap Circuit Focus" also to white.
+25. Safety Rules button stays the same as Meet the Components (same style); only the warning card should be red.
+26. Reduce the border shadow on "tap the component" (the user will say more about it).
+27. Buttons: change the colour to white.
+28. Grid layout for joining the components: reduce the size of the text and the icon.
+29. Celebration on completion: apart from the Sparky hop, also add some rainbow colours.
+22. Ran `npm run voice` so Sparky has Kokoro clips for every piece (confirmed by the user 2026-11-12).
+
+### Completed 2026-11-12 (developer pass 4)
+
+30. Sparky wears a red bandana with a yellow bolt (designer SVG services/sparky/sparky-bandana.svg, approved by the user). Replaces the rejected forehead bolt.

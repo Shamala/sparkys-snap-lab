@@ -415,9 +415,13 @@ header[class] :is(a, h1, p, div, span) {
   opacity: 0;
   animation: confetti 2.6s ease-in forwards;
 }
-.celebrate i:nth-child(3n) { --c: #fb8500; }
-.celebrate i:nth-child(3n + 1) { --c: #ffb703; }
-.celebrate i:nth-child(3n + 2) { --c: #219ebc; }
+.celebrate i:nth-child(7n + 1) { --c: #e63946; }
+.celebrate i:nth-child(7n + 2) { --c: #fb8500; }
+.celebrate i:nth-child(7n + 3) { --c: #ffd60a; }
+.celebrate i:nth-child(7n + 4) { --c: #2a9d3f; }
+.celebrate i:nth-child(7n + 5) { --c: #219ebc; }
+.celebrate i:nth-child(7n + 6) { --c: #4361ee; }
+.celebrate i:nth-child(7n + 7) { --c: #9d4edd; }
 .celebrate i:nth-child(4n) { border-radius: 50%; width: 12px; height: 12px; }
 .celebrate i:nth-child(1) { left: 6%; animation-delay: 0s; }
 .celebrate i:nth-child(2) { left: 14%; animation-delay: 0.3s; }
@@ -443,6 +447,16 @@ header[class] :is(a, h1, p, div, span) {
   .celebrate { display: none; }
 }
 
+/* rainbow banner over the celebration message */
+.yay {
+  background: linear-gradient(90deg, #e63946, #fb8500, #ffd60a, #2a9d3f, #219ebc, #4361ee, #9d4edd);
+  border-radius: 12px;
+  padding: 6px 12px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(2, 48, 71, 0.6);
+  text-align: center;
+}
+
 /* Sparky hops with the confetti on the last step */
 .sparky-body.hop {
   display: inline-block;
@@ -455,3 +469,28 @@ header[class] :is(a, h1, p, div, span) {
 @media (prefers-reduced-motion: reduce) {
   .sparky-body.hop { animation: none; }
 }
+
+/* white buttons (ink text and ink border keep them legible) */
+:root:root {
+  --shamallya-semantic-color-primary-default: #fff;
+  --shamallya-semantic-color-primary-hover: #f1f1f1;
+  --shamallya-semantic-color-primary-active: #e2e2e2;
+}
+a.bg-primary, button.bg-primary { border-color: var(--ink); }
+
+/* white titles on every fur header */
+header[class] h1[class] {
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(2, 48, 71, 0.45);
+}
+
+/* "tap a piece" bubble: lighter border and shadow */
+.dialogs > div:first-child {
+  border-width: 2px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* board: smaller piece icons and text */
+.piece .emoji { font-size: 15px; }
+.piece .emoji.big { font-size: 26px; }
+.piece .label { font-size: 10px; stroke-width: 2px; }
