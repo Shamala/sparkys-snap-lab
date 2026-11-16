@@ -22,14 +22,17 @@ export type GlossaryCardProps = {
 };
 
 export function GlossaryCard({ emoji, imgSrc, name, nameLang, id, what, why, how, barClassName, className }: GlossaryCardProps) {
+  // Picture tile at the start, then name and id, then the text. No colour bar: a plain white card with a thin border.
   return (
-    <article className={cn("flex overflow-hidden rounded-card border-bw-default border-border-card bg-surface-raised font-body leading-normal text-text", className)}>
-      <div aria-hidden="true" className={cn("w-2 shrink-0", barClassName ?? "bg-border-strong")} />
-      <div className="min-w-0 flex-1 p-inset-md">
+    <article className={cn("flex items-start gap-gap-md rounded-card border-bw-default border-border-card bg-surface-raised p-inset-md font-body leading-normal text-text", className)}>
+      <div aria-hidden="true" className="glossary-media flex shrink-0 items-center justify-center">
+        {imgSrc
+          ? <img src={imgSrc} alt="" loading="lazy" className="max-h-full max-w-full object-contain" />
+          : <span className="text-3xl leading-none">{emoji}</span>}
+      </div>
+      <div className="min-w-0 flex-1">
         <p className="text-ui-body font-heading-strong [overflow-wrap:anywhere]">
-          {imgSrc
-            ? <img src={imgSrc} alt="" loading="lazy" className="me-gap-sm inline-block h-12 w-16 object-contain align-middle" />
-            : <span aria-hidden="true">{emoji}</span>}{" "}<span lang={nameLang}>{name}</span> <span className="font-regular text-text-muted">{id}</span>
+          <span lang={nameLang}>{name}</span> <span className="font-regular text-text-muted">{id}</span>
         </p>
         <p className="mt-stack-sm text-ui-reading [overflow-wrap:anywhere]">{what} {why} {how}</p>
       </div>

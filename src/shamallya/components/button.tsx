@@ -42,9 +42,9 @@ const base = cn(
 const variants: Record<Variant, string> = {
   primary: "border-transparent bg-primary text-primary-on hover:bg-primary-hover active:bg-primary-active",
   // D-2: primary.hover and .active are fill tokens, never text or border colour. Hover underlines; pressed uses text.default.
-  outline: "border-bw-strong border-primary-text bg-surface-raised text-primary-text hover:underline active:border-text active:text-text active:underline",
-  ghost: "border-transparent bg-transparent text-primary-text hover:underline active:text-text active:underline",
-  quiet: "border-transparent bg-transparent text-text-muted hover:text-text hover:underline active:border-border-strong active:text-text active:underline",
+  outline: "border-bw-strong border-primary-text bg-surface-raised text-primary-text active:border-text active:text-text",
+  ghost: "border-transparent bg-transparent text-primary-text active:text-text",
+  quiet: "border-transparent bg-transparent text-text-muted hover:text-text active:border-border-strong active:text-text",
 };
 
 const Icon = ({ children }: { children: ReactNode }) => (

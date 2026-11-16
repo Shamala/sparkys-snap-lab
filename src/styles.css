@@ -13,8 +13,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 main {
-  max-width: 1100px;
-  margin: 0 auto;
   padding: 16px;
   padding-bottom: calc(16px + env(safe-area-inset-bottom));
 }
@@ -168,7 +166,6 @@ main {
   margin-top: 16px;
 }
 
-
 /* Sparky and his speech bubble */
 .stage {
   display: flex;
@@ -195,10 +192,11 @@ body.talking .mascot .anim-head {
   margin: 0;
   animation: snap 0.6s both;
 }
-@media (min-width: 900px) {
-  .project {
-    grid-template-columns: 3fr 2fr;
-  }
+/* wide screens: the board is centred, Sparky and his bubble sit below it */
+.project {
+  max-width: 720px;
+  margin-inline: auto;
+  width: 100%;
 }
 /* three kid-size buttons side by side on a phone: keep each label on one line */
 [role="group"] > div > * {
@@ -214,7 +212,8 @@ body.talking .mascot .anim-head {
 }
 header[class] {
   background: var(--fur);
-  color: var(--ink);
+  color: #fff;
+  text-align: center;
   border-color: rgba(2, 48, 71, 0.25);
 }
 header[class] :is(a, h1, p, div, span) {
@@ -249,8 +248,8 @@ header[class] :is(a, h1, p, div, span) {
 /* slimmer project tiles and piece tiles: thin border, small shadow */
 .cards > a,
 .need {
-  border: 2px solid var(--ink);
-  box-shadow: 2px 2px 0 var(--ink);
+  border: 1px solid var(--ink);
+  box-shadow: 1px 1px 0 var(--ink);
   border-radius: 16px;
 }
 .cards > a:active,
@@ -354,8 +353,14 @@ header[class] :is(a, h1, p, div, span) {
   pointer-events: none;
 }
 @keyframes float {
-  from { transform: translate(-50%, 0); opacity: 1; }
-  to { transform: translate(-50%, -26px); opacity: 0; }
+  from {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -26px);
+    opacity: 0;
+  }
 }
 .row > a,
 .row > div > button {
@@ -415,41 +420,124 @@ header[class] :is(a, h1, p, div, span) {
   opacity: 0;
   animation: confetti 2.6s ease-in forwards;
 }
-.celebrate i:nth-child(7n + 1) { --c: #e63946; }
-.celebrate i:nth-child(7n + 2) { --c: #fb8500; }
-.celebrate i:nth-child(7n + 3) { --c: #ffd60a; }
-.celebrate i:nth-child(7n + 4) { --c: #2a9d3f; }
-.celebrate i:nth-child(7n + 5) { --c: #219ebc; }
-.celebrate i:nth-child(7n + 6) { --c: #4361ee; }
-.celebrate i:nth-child(7n + 7) { --c: #9d4edd; }
-.celebrate i:nth-child(4n) { border-radius: 50%; width: 12px; height: 12px; }
-.celebrate i:nth-child(1) { left: 6%; animation-delay: 0s; }
-.celebrate i:nth-child(2) { left: 14%; animation-delay: 0.3s; }
-.celebrate i:nth-child(3) { left: 22%; animation-delay: 0.1s; }
-.celebrate i:nth-child(4) { left: 30%; animation-delay: 0.5s; }
-.celebrate i:nth-child(5) { left: 38%; animation-delay: 0.2s; }
-.celebrate i:nth-child(6) { left: 46%; animation-delay: 0.6s; }
-.celebrate i:nth-child(7) { left: 54%; animation-delay: 0.05s; }
-.celebrate i:nth-child(8) { left: 62%; animation-delay: 0.4s; }
-.celebrate i:nth-child(9) { left: 70%; animation-delay: 0.15s; }
-.celebrate i:nth-child(10) { left: 78%; animation-delay: 0.55s; }
-.celebrate i:nth-child(11) { left: 86%; animation-delay: 0.25s; }
-.celebrate i:nth-child(12) { left: 94%; animation-delay: 0.45s; }
-.celebrate i:nth-child(13) { left: 10%; animation-delay: 0.8s; }
-.celebrate i:nth-child(14) { left: 34%; animation-delay: 0.9s; }
-.celebrate i:nth-child(15) { left: 58%; animation-delay: 0.75s; }
-.celebrate i:nth-child(16) { left: 82%; animation-delay: 0.95s; }
+.celebrate i:nth-child(7n + 1) {
+  --c: #e63946;
+}
+.celebrate i:nth-child(7n + 2) {
+  --c: #fb8500;
+}
+.celebrate i:nth-child(7n + 3) {
+  --c: #ffd60a;
+}
+.celebrate i:nth-child(7n + 4) {
+  --c: #2a9d3f;
+}
+.celebrate i:nth-child(7n + 5) {
+  --c: #219ebc;
+}
+.celebrate i:nth-child(7n + 6) {
+  --c: #4361ee;
+}
+.celebrate i:nth-child(7n + 7) {
+  --c: #9d4edd;
+}
+.celebrate i:nth-child(4n) {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+.celebrate i:nth-child(1) {
+  left: 6%;
+  animation-delay: 0s;
+}
+.celebrate i:nth-child(2) {
+  left: 14%;
+  animation-delay: 0.3s;
+}
+.celebrate i:nth-child(3) {
+  left: 22%;
+  animation-delay: 0.1s;
+}
+.celebrate i:nth-child(4) {
+  left: 30%;
+  animation-delay: 0.5s;
+}
+.celebrate i:nth-child(5) {
+  left: 38%;
+  animation-delay: 0.2s;
+}
+.celebrate i:nth-child(6) {
+  left: 46%;
+  animation-delay: 0.6s;
+}
+.celebrate i:nth-child(7) {
+  left: 54%;
+  animation-delay: 0.05s;
+}
+.celebrate i:nth-child(8) {
+  left: 62%;
+  animation-delay: 0.4s;
+}
+.celebrate i:nth-child(9) {
+  left: 70%;
+  animation-delay: 0.15s;
+}
+.celebrate i:nth-child(10) {
+  left: 78%;
+  animation-delay: 0.55s;
+}
+.celebrate i:nth-child(11) {
+  left: 86%;
+  animation-delay: 0.25s;
+}
+.celebrate i:nth-child(12) {
+  left: 94%;
+  animation-delay: 0.45s;
+}
+.celebrate i:nth-child(13) {
+  left: 10%;
+  animation-delay: 0.8s;
+}
+.celebrate i:nth-child(14) {
+  left: 34%;
+  animation-delay: 0.9s;
+}
+.celebrate i:nth-child(15) {
+  left: 58%;
+  animation-delay: 0.75s;
+}
+.celebrate i:nth-child(16) {
+  left: 82%;
+  animation-delay: 0.95s;
+}
 @keyframes confetti {
-  0% { opacity: 1; transform: translateY(0) rotate(0); }
-  100% { opacity: 1; transform: translateY(105vh) rotate(540deg); }
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(105vh) rotate(540deg);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-  .celebrate { display: none; }
+  .celebrate {
+    display: none;
+  }
 }
 
 /* rainbow banner over the celebration message */
 .yay {
-  background: linear-gradient(90deg, #e63946, #fb8500, #ffd60a, #2a9d3f, #219ebc, #4361ee, #9d4edd);
+  background: linear-gradient(
+    90deg,
+    #e63946,
+    #fb8500,
+    #ffd60a,
+    #2a9d3f,
+    #219ebc,
+    #4361ee,
+    #9d4edd
+  );
   border-radius: 12px;
   padding: 6px 12px;
   color: #fff;
@@ -463,20 +551,36 @@ header[class] :is(a, h1, p, div, span) {
   animation: hop 0.6s ease-in-out 5;
 }
 @keyframes hop {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-24px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-  .sparky-body.hop { animation: none; }
+  .sparky-body.hop {
+    animation: none;
+  }
 }
 
-/* white buttons (ink text and ink border keep them legible) */
+/* primary buttons: the header's fur orange with white text, no border; every button is a pill */
 :root:root {
-  --shamallya-semantic-color-primary-default: #fff;
-  --shamallya-semantic-color-primary-hover: #f1f1f1;
-  --shamallya-semantic-color-primary-active: #e2e2e2;
+  --shamallya-semantic-color-primary-default: var(--fur);
+  --shamallya-semantic-color-primary-hover: #d4721a;
+  --shamallya-semantic-color-primary-active: #b85f12;
 }
-a.bg-primary, button.bg-primary { border-color: var(--ink); }
+a.rounded-button,
+button.rounded-button {
+  border-radius: 9999px;
+}
+a.bg-primary,
+button.bg-primary {
+  border-color: transparent;
+  color: #fff;
+  font-weight: 600;
+}
 
 /* white titles on every fur header */
 header[class] h1[class] {
@@ -491,6 +595,119 @@ header[class] h1[class] {
 }
 
 /* board: smaller piece icons and text */
-.piece .emoji { font-size: 15px; }
-.piece .emoji.big { font-size: 26px; }
-.piece .label { font-size: 10px; stroke-width: 2px; }
+.piece .emoji {
+  font-size: 15px;
+}
+.piece .emoji.big {
+  font-size: 26px;
+}
+.piece .label {
+  font-size: 10px;
+  stroke-width: 2px;
+}
+
+/* centered headers, white contents (the eyebrow too) */
+header[class] :is(h1, p) {
+  text-align: center;
+}
+header[class] p {
+  color: #fff;
+}
+.brand header[class] .flex {
+  justify-content: center;
+}
+
+/* header: back arrow at the start, Sparky beside the title */
+.back-arrow {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  color: #fff;
+}
+.back-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.brand {
+  justify-content: center;
+  padding-inline: 16px;
+}
+.brand header[class] {
+  flex: 0 1 auto;
+}
+
+/* project tile names: lighter and smaller */
+.cards > a > span:not(.tile-emoji) {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* faint glow behind a project tile on hover */
+.cards > a:hover {
+  box-shadow:
+    1px 1px 0 var(--ink),
+    0 0 18px 6px rgba(230, 126, 34, 0.35);
+}
+
+/* footer centered */
+.legal,
+.legal * {
+  text-align: center;
+}
+
+/* no underlines on buttons and links styled as buttons */
+a,
+button {
+  text-decoration: none;
+}
+
+/* Meet the pieces cards: white, thin border, picture tile on the left */
+.list > article {
+  border: 1px solid rgba(2, 48, 71, 0.2);
+  border-radius: 12px;
+  box-shadow: none;
+}
+.glossary-media {
+  width: 88px;
+  height: 72px;
+  border-radius: 8px;
+  background: var(--bg);
+  padding: 6px;
+}
+
+/* the project page fills the screen, so the action bar sits at the very bottom with no gap below it */
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+main.project {
+  flex: 1;
+  align-content: start;
+}
+
+/* pieces added in this step, under the speech bubble */
+.step-pieces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.step-pieces img {
+  height: 72px;
+  max-width: 160px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid rgba(2, 48, 71, 0.2);
+  border-radius: 12px;
+  padding: 6px;
+}

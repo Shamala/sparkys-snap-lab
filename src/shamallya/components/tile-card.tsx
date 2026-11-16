@@ -43,13 +43,13 @@ export function TileCard({ href, emoji, number, title, titleLang, marks, onClick
           </span>
         </span>
       )}{" "}
-      <span aria-hidden="true" className="tile-emoji">
-        {emoji}
-      </span>
       <span lang={titleLang} className="text-ui-body font-heading-strong [overflow-wrap:anywhere]">
         {title}
         {marks && <span className={comma}>,</span>}
       </span>{" "}
+      <span aria-hidden="true" className="tile-emoji">
+        {emoji}
+      </span>
       {marks && <span className="mt-auto flex items-center gap-gap-sm">{marks}</span>}
     </a>
   );

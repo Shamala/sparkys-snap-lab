@@ -68,12 +68,11 @@ function bark() {
   } catch {}
 }
 
-// Project difficulty from how many pieces it uses (wires do not count).
-const TAGS = ['Starter', 'Explorer', 'Builder', 'Inventor']
-const level = (p) => {
-  const n = p.steps.flatMap((s) => s.add || []).filter((c) => !c.p.startsWith('W')).length
-  return TAGS[n <= 3 ? 0 : n <= 7 ? 1 : n <= 14 ? 2 : 3]
-}
+// Difficulty is the project's own level (1-3); within a level, fewer pieces (wires do not count) come first.
+const TAGS = ['Easy', 'Medium', 'Difficult']
+const level = (p) => TAGS[p.level - 1]
+const pieces = (p) => p.steps.flatMap((s) => s.add || []).filter((c) => !c.p.startsWith('W')).length
+const byDifficulty = (a, b) => a.level - b.level || pieces(a) - pieces(b)
 
 export default function App() {
   const hash = useHash()
@@ -117,7 +116,7 @@ function Home({ projects }) {
         </div>
         <SectionHeading>{projects.length} projects</SectionHeading>
         <div className="cards">
-          {projects.map((p) => (
+          {[...projects].sort(byDifficulty).map((p) => (
             <TileCard key={p.id} href={`#p/${p.id}`} emoji={p.emoji} title={p.title}
               marks={<><span className="tag">{level(p)}</span>{done.includes(p.id) && <span aria-label="Done">⭐</span>}</>} />
           ))}
@@ -131,13 +130,13 @@ function Home({ projects }) {
 // Pictures of the real kit pieces (public/parts). Pieces without one (music, alarm and space chips) keep their emoji.
 const HAS_IMG = new Set('W2 W3 W4 W5 B1 S1 S2 L1 D1 D2 M1 SP WC R1 R4 RV RP C4 Q2'.split(' '))
 
-const card = (p) => <GlossaryCard key={p.id} emoji={p.emoji} imgSrc={HAS_IMG.has(p.id) ? `${PARTS_URL}/${p.id}.png` : undefined} name={p.name} id={p.id} what={p.what} why={p.why} how={p.how} />
+const card = ([k, p]) => <GlossaryCard key={k} emoji={p.emoji} imgSrc={HAS_IMG.has(k) ? `${PARTS_URL}/${k}.png` : undefined} name={p.name} id={p.id} what={p.what} why={p.why} how={p.how} />
 
 function Parts({ parts }) {
   return (
     <>
       <PushedHeader back={{ origin: 'Home', href: '#' }} title="Meet the Pieces" meta="What each piece is, why it is used and how to use it" />
-      <main className="home list">{Object.values(parts).map(card)}</main>
+      <main className="home list">{Object.entries(parts).map(card)}</main>
     </>
   )
 }
@@ -176,7 +175,7 @@ function Needs({ project, parts }) {
   }, [talking])
   return (
     <>
-      <PushedHeader back={{ origin: 'Home', href: '#' }} title={`${project.emoji} ${project.title}`} meta="Things you need"
+      <PushedHeader noSparky back={{ origin: 'Home', href: '#' }} title={`${project.emoji} ${project.title}`} meta="Things you need"
         trailing={muteToggle(voice, toggle)} />
       <main className="home needs-page">
         <ul className="needs">
@@ -204,7 +203,7 @@ function Needs({ project, parts }) {
                     <div data-speak className="mt-2">
                       {talking
                         ? <Button variant="outline" leadingIcon={<Pause />} onClick={pause}>Pause</Button>
-                        : <Button variant="primary" leadingIcon={<Play />} onClick={play}>Play</Button>}
+                        : <Button variant="outline" leadingIcon={<Play />} onClick={play}>Play</Button>}
                     </div>
                   )}
                 </>
@@ -288,8 +287,8 @@ function Project({ project, parts }) {
 
   return (
     <>
-      <PushedHeader back={{ origin: 'Things you need', href: `#p/${project.id}` }} title={`${project.emoji} ${project.title}`}
-        meta={<ProgressDots current={i + 1} total={steps.length} className="mt-1 flex-wrap" />}
+      <PushedHeader noSparky back={{ origin: 'Things you need', href: `#p/${project.id}` }} title={`${project.emoji} ${project.title}`}
+        meta={<ProgressDots current={i + 1} total={steps.length} className="mt-1 flex-wrap justify-center" />}
         trailing={muteToggle(voice, toggleVoice)} />
       <main className="project">
         {last && <Celebrate />}
@@ -299,6 +298,12 @@ function Project({ project, parts }) {
           <div className="dialogs">
             <SpeechBubble variant={last ? 'party' : 'say'} tail={voice}>{step.say}</SpeechBubble>
             {last && <p className="yay">🎉 You did it! ⭐</p>}
+            {/* a picture of each piece this step adds, right under what Sparky says */}
+            <div className="step-pieces">
+              {[...new Set((step.add || []).map((c) => c.p))].filter((k) => HAS_IMG.has(k)).map((k) => (
+                <img key={k} src={`${PARTS_URL}/${k}.png`} alt={parts[k]?.name || k} />
+              ))}
+            </div>
           </div>
         </section>
       </main>
