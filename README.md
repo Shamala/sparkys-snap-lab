@@ -1,5 +1,7 @@
 # Sparky's Snap Lab
 
+**▶ Live app: https://shamala.github.io/sparkys-snap-lab/**
+
 A friendly, follow-along app for kids aged 5 and up. Sparky the dog walks a child through 25 small snap-together electronics projects, one step at a time, like a short movie. It works on phones, tablets and desktops, and keeps working offline once it has loaded.
 
 > Not affiliated with or endorsed by Elenco Electronics, Inc. Snap Circuits is a registered trademark of Elenco Electronics, Inc. Grown-up supervision required. Use at your own risk.
